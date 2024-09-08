@@ -1,0 +1,131 @@
+% !TEX program = xelatex
+\documentclass[12pt,hyperref,a4paper,UTF8]{article}
+\usepackage{CityUhomework}
+
+%%------------------Beginning of the text-----------------%%
+\begin{document}
+
+%%-----------------Cover------------------%%
+\cover
+\thispagestyle{empty}% Home page does not show page numbers
+\newpage
+%%-----------------Abstract-------------------%%
+\begin{abstract}
+    Please fill in the abstract here
+\end{abstract}
+
+
+%%-----------------Catalog-------------------%%
+\newpage
+\tableofcontents
+
+%%-----------------Main text starts here-------------------%%
+\newpage
+
+\section{Template Description}
+Default margins are 2.5cm, Chinese Song font, English Times New Roman, font size 12pt.
+\subsection{bar}
+\subsubsection{sub bar}
+\section{Example}
+\textbf{bold text}
+
+\textit{Skewed text}
+
+\underline{underscore text}
+
+Item number:
+
+\begin{itemize}
+    \item XXX
+    \item XXX
+    \item XXX
+\end{itemize}
+
+\begin{enumerate}
+    \item XXX
+    \item XXX
+    \item XXX
+\end{enumerate}
+
+Inner equation：$\int_a^b f(x)dx = F(b)-F(a)$
+
+Sample maths formula layout:
+\begin{equation}\label{eq:1}
+    \int_a^b f(x)dx = F(b)-F(a)
+\end{equation}
+
+\begin{equation}\label{eq:2}
+    E = mc^2
+\end{equation}
+
+\begin{equation}\label{eq:3}
+    x^2 \geq 0 \qquad \text{for all } x \in \mathbb{R}
+\end{equation}
+
+\begin{equation}\label{eq:4}
+    \lim_{n \to \infty}
+    \sum_{k=1}^n \frac{1}{k^2}
+    = \frac{\pi^2}{6}
+\end{equation}
+
+chi-squared distribution:
+\begin{equation}\label{eq:5}
+    f(y) =
+    \begin{cases}
+        \frac{1}{2^{k/2}\Gamma(k/2)} x^{k/2-1} e^{-x/2} & y>0              \\
+        0                                               & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+Multi-line formulas:
+\begin{multline} \label{eq:6}
+    a + b + c + d + e + f
+    + g + h + i \\
+    = j + k + l + m + n\\
+    = o + p + q + r + s\\
+    = t + u + v + x + z
+\end{multline}
+
+\begin{align} \label{eq:7}
+    a & = b + c \\
+      & = d + e
+\end{align}
+
+Matrix:
+\begin{equation} \label{eq:8}
+    \begin{bmatrix}
+        x_{11} & x_{12} & \ldots & x_{1n} \\
+        x_{21} & x_{22} & \ldots & x_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        x_{n1} & x_{n2} & \ldots & x_{nn} \\
+    \end{bmatrix}
+\end{equation}
+
+Theorem:
+\newtheorem{mass-energy equivalence}{mass-energy equivalence}[section]
+\begin{mass-energy equivalence} \label{thm:1}
+$E = mc^2$
+\end{mass-energy equivalence}
+
+Insert the table:
+\begin{table}[h]
+    \begin{tabular}{|c|c|}% Indicate whether vertical lines need to be drawn by adding |.
+        \hline  % Draw a horizontal line at the top of the table
+        (1,1) & (1,2) \\
+        \hline  % Drawing a horizontal line between the first and second rows
+        (2,1) & (2,2) \\
+        \hline % Draw a horizontal line at the bottom of the table
+    \end{tabular}
+\end{table}
+
+Insert picture:
+The number in [scale=] controls the size of the image; the parentheses after it indicate the path of the image, please upload the image to the figures folder; the caption indicates the title of the image.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.1]{figures/FDS logo.jpg}
+    \caption{Fill in the title of the image here}
+\end{figure}
+
+
+
+\end{document}
