@@ -1,0 +1,131 @@
+% !TEX program = xelatex
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{CityUhomework}
+
+%%------------------正文开始-----------------%%
+\begin{document}
+
+%%-----------------封面-------------------%%
+\cover\
+\thispagestyle{empty}% 首页不显示页码
+
+%%-----------------摘要-------------------%%
+\begin{abstract}
+    请在此处填写摘要
+\end{abstract}
+
+
+%%-----------------目录-------------------%%
+\newpage
+\tableofcontents
+
+%%-----------------正文从此处开始-------------------%%
+\newpage
+
+\section{模板说明}
+默认页边距为2.5cm，中文宋体，英文Times New Roman，字号为12pt。
+\subsection{小节}
+\subsubsection{小小节}
+\section{样例}
+\textbf{加粗文本}
+
+\textit{倾斜文本}
+
+\underline{下划线文本}
+
+项目编号：
+
+\begin{itemize}
+    \item XXX
+    \item XXX
+    \item XXX
+\end{itemize}
+
+\begin{enumerate}
+    \item XXX
+    \item XXX
+    \item XXX
+\end{enumerate}
+
+行内公式：$\int_a^b f(x)dx = F(b)-F(a)$
+
+数学公式排版样例：
+\begin{equation}\label{eq:1}
+    \int_a^b f(x)dx = F(b)-F(a)
+\end{equation}
+
+\begin{equation}\label{eq:2}
+    E = mc^2
+\end{equation}
+
+\begin{equation}\label{eq:3}
+    x^2 \geq 0 \qquad \text{for all } x \in \mathbb{R}
+\end{equation}
+
+\begin{equation}\label{eq:4}
+    \lim_{n \to \infty}
+    \sum_{k=1}^n \frac{1}{k^2}
+    = \frac{\pi^2}{6}
+\end{equation}
+
+chi-squared distribution:
+\begin{equation}\label{eq:5}
+    f(y) =
+    \begin{cases}
+        \frac{1}{2^{k/2}\Gamma(k/2)} x^{k/2-1} e^{-x/2} & y>0              \\
+        0                                               & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+多行公式：
+\begin{multline} \label{eq:6}
+    a + b + c + d + e + f
+    + g + h + i \\
+    = j + k + l + m + n\\
+    = o + p + q + r + s\\
+    = t + u + v + x + z
+\end{multline}
+
+\begin{align} \label{eq:7}
+    a & = b + c \\
+      & = d + e
+\end{align}
+
+矩阵：
+\begin{equation} \label{eq:8}
+    \begin{bmatrix}
+        x_{11} & x_{12} & \ldots & x_{1n} \\
+        x_{21} & x_{22} & \ldots & x_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        x_{n1} & x_{n2} & \ldots & x_{nn} \\
+    \end{bmatrix}
+\end{equation}
+
+定理：
+\newtheorem{mass-energy equivalence}{质能方程}[section]
+\begin{mass-energy equivalence} \label{thm:1}
+$E = mc^2$
+\end{mass-energy equivalence}
+
+插入表格：
+\begin{table}[h]
+    \begin{tabular}{|c|c|}% 通过添加 | 来表示是否需要绘制竖线
+        \hline  % 在表格最上方绘制横线
+        (1,1) & (1,2) \\
+        \hline  %在第一行和第二行之间绘制横线
+        (2,1) & (2,2) \\
+        \hline % 在表格最下方绘制横线
+    \end{tabular}
+\end{table}
+
+插入图片：
+[scale=] 中的数可以控制图片大小；后面的括号表示图片的路径，请把图片上传到figures文件夹中；caption表示图片的标题
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.1]{figures/FDS logo.jpg}
+    \caption{在此填写图片的标题}
+\end{figure}
+
+
+
+\end{document}
