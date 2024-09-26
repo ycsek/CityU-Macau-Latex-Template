@@ -1,9 +1,9 @@
 % !TEX program = xelatex
-\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\documentclass[12pt,hyperref,a4paper,UTF8]{article}
 \usepackage{CityUhomework}
 \usepackage{listings}
 \usepackage{xcolor}
-% 定义可能使用到的颜色
+% define the color of the code
 \definecolor{CPPLight}  {HTML} {686868}
 \definecolor{CPPSteel}  {HTML} {888888}
 \definecolor{CPPDark}   {HTML} {262626}
@@ -18,27 +18,27 @@
 \definecolor{bgcolor}{rgb}{0.92,0.92,0.92}
 
 \lstset{
-    breaklines = true,                                   % 自动将长的代码行换行排版
-    extendedchars=false,                                 % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+    breaklines = true,                                   % automatic line break
+    extendedchars=false,                               
     columns=fixed,       
-    numbers=left,                                        % 在左侧显示行号
-    basicstyle=\zihao{-5}\ttfamily,
+    numbers=left,                                        % line number position
+    basicstyle=\ttfamily,
     numberstyle=\small,
-    frame=none,                                          % 不显示背景边框
-    % backgroundcolor=\color[RGB]{245,245,244},            % 设定背景颜色
-    keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
-    numberstyle=\footnotesize\color{darkgray},           % 设定行号格式
-    commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
-    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
-    showstringspaces=false,                              % 不显示字符串中的空格
-    % frame=leftline,topline,rightline, bottomline         %分别对应只在左侧，上方，右侧，下方有竖线
-    frame=shadowbox,                                     % 设置阴影
-    rulesepcolor=\color{red!20!green!20!blue!20},        % 阴影颜色
+    frame=none,                                         % no frame
+    % backgroundcolor=\color[RGB]{245,245,244},         % set background color
+    keywordstyle=\color[RGB]{40,40,255},                % keyword color
+    numberstyle=\footnotesize\color{darkgray},          
+    commentstyle=\it\color[RGB]{0,96,96},
+    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   
+    showstringspaces=false,                             
+    % frame=leftline,topline,rightline, bottomline       
+    frame=shadowbox,                                    
+    rulesepcolor=\color{red!20!green!20!blue!20},
     basewidth=0.6em,
 }
 
 \lstdefinestyle{CPP}{
-    language=c++,                                        % 设置语言
+    language=c++,                                        % language
     morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
     reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
     typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
