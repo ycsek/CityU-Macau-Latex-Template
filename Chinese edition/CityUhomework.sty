@@ -11,6 +11,12 @@
 %%原作者：He Junwei
 %%Overleaf地址：https://www.overleaf.com/latex/templates/zhong-guo-ke-xue-yuan-da-xue-ke-cheng-lun-wen-mo-ban/nphpxhhqvnds
 
+%%在“中国人民大学课程报告模板”基础上修改而来
+%%原作者：xxmy7
+%%License：Apache-2.0 license
+%%GitHub：https://github.com/xxmy7/RUC_Report_Latex_Template
+%%Overleaf：https://www.overleaf.com/latex/templates/ruc-report-latex-template/hhwhvvwczbnm
+
 
 \ProvidesPackage{CityUhomework}
 
@@ -37,6 +43,12 @@
 \RequirePackage{tcolorbox}
 
 \RequirePackage{fontawesome}
+\RequirePackage{caption}
+%% 去掉图标标题中的冒号，将分隔变为空格
+% 或者是：
+% \captionsetup{labelformat=default,labelsep=space} %去除冒号
+\captionsetup[table]{labelsep=space} % 表
+\captionsetup[figure]{labelsep=space} % 图  
 
 %% 更改摘要二字的样式
 \renewcommand{\abstractname}{\textbf{\large {摘\quad 要}}}
@@ -72,11 +84,11 @@
 
 %%参考文献设置
 \newcommand{\reference}{
-    %\nocite{*}   %打开此选项会列出bib里面的所有参考文献
-    \bibliographystyle{unsrt} %规定了参考文献的格式
-    \begin{center}%居中
-        \bibliography{reference} %调出LaTeX生成参考文献列表
-    \end{center}
+%\nocite{*}   %打开此选项会列出bib里面的所有参考文献
+\bibliographystyle{unsrt} %规定了参考文献的格式
+\begin{center} %居中
+	\bibliography{reference} %调出LaTeX生成参考文献列表
+\end{center}
 }
 
 %%文本框设置
@@ -103,9 +115,9 @@
 
 \title{
     \vspace{2.0cm}
-    \heiti \Huge \textbf{{Title | XXXX}} \par
+    \heiti \Huge \textbf{{标题 | XXXX}} \par
     \vspace{1cm}
-    \heiti \Large {\underline{XXXX}}
+    \heiti \Large {XXXX}
     \vspace{2cm} }%标题
 
 \author{

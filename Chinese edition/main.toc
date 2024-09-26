@@ -2,3 +2,9 @@
 \contentsline {subsection}{\numberline {1.1}小节}{4}{subsection.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.1}小小节}{4}{subsubsection.1.1.1}%
 \contentsline {section}{\numberline {2}样例}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}插入文本}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}插入列表}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}插入数学公式}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}插入表格和图片}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}插入高亮代码}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}插入参考文献}{6}{subsection.2.6}%
