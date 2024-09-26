@@ -1,6 +1,64 @@
 % !TEX program = xelatex
 \documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
 \usepackage{CityUhomework}
+\usepackage{listings}
+\usepackage{xcolor}
+% 定义可能使用到的颜色
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\definecolor{keywordcolor}{rgb}{0.8,0.1,0.5}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{bgcolor}{rgb}{0.92,0.92,0.92}
+
+\lstset{
+    breaklines = true,                                   % 自动将长的代码行换行排版
+    extendedchars=false,                                 % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+    columns=fixed,       
+    numbers=left,                                        % 在左侧显示行号
+    basicstyle=\zihao{-5}\ttfamily,
+    numberstyle=\small,
+    frame=none,                                          % 不显示背景边框
+    % backgroundcolor=\color[RGB]{245,245,244},            % 设定背景颜色
+    keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+    numberstyle=\footnotesize\color{darkgray},           % 设定行号格式
+    commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+    stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+    showstringspaces=false,                              % 不显示字符串中的空格
+    % frame=leftline,topline,rightline, bottomline         %分别对应只在左侧，上方，右侧，下方有竖线
+    frame=shadowbox,                                     % 设置阴影
+    rulesepcolor=\color{red!20!green!20!blue!20},        % 阴影颜色
+    basewidth=0.6em,
+}
+
+\lstdefinestyle{CPP}{
+    language=c++,                                        % 设置语言
+    morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+    reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+    typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+    dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+    char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+    void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+    const,false,private,this,while,constexpr,float,protected,thread_local,
+    const_cast,for,public,throw,std},
+    emph={map,set,multimap,multiset,unordered_map,unordered_set,
+    unordered_multiset,unordered_multimap,vector,string,list,deque,
+    array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+    random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+    uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+    emphstyle=\color{CPPViolet}, 
+}
+
+
+\lstdefinestyle{Python}{
+    language=Python,
+}
 
 %%------------------Beginning of the text-----------------%%
 \begin{document}
@@ -27,12 +85,15 @@ Default margins are 2.5cm, Chinese Song font, English Times New Roman, font size
 \subsection{bar}
 \subsubsection{sub bar}
 \section{Example}
+
+\subsection{Insert text}
 \textbf{bold text}
 
 \textit{Skewed text}
 
 \underline{underscore text}
 
+\subsection{Insert list}
 Item number:
 
 \begin{itemize}
@@ -47,6 +108,7 @@ Item number:
     \item XXX
 \end{enumerate}
 
+\subsection{Insert mathematical formulas}
 Inner equation：$\int_a^b f(x)dx = F(b)-F(a)$
 
 Sample maths formula layout:
@@ -107,6 +169,7 @@ Theorem:
 $E = mc^2$
 \end{mass-energy equivalence}
 
+\subsection{Insert table and picture}
 Insert the table:
 \begin{table}[h]
     \begin{tabular}{|c|c|}% Indicate whether vertical lines need to be drawn by adding |.
@@ -126,6 +189,39 @@ The number in [scale=] controls the size of the image; the parentheses after it 
     \caption{Fill in the title of the image here}
 \end{figure}
 
+\subsection{Insert code}
+use\verb|lstlisting| configuration
+\begin{lstlisting}[style=CPP, title="c++ code"]
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[style=Python, title="Python code"]
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.show()
+\end{lstlisting}
+
+\subsection{Insert reference}
+
+Just use \verb|\cite{}|
+
+   \textit{ The literature cited here  \cite{liu2023backdoor}  The literature cited here \cite{du2024sequential} }
+
+%%----------- Reference -------------------%%
+% Fill in the references in the reference.bib file, which will be automatically generated here
+
+\reference
 
 
 \end{document}

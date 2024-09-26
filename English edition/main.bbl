@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{liu2023backdoor}
+Yugeng Liu, Zheng Li, Michael Backes, Yun Shen, and Yang Zhang.
+\newblock Backdoor attacks against dataset distillation.
+\newblock {\em arXiv preprint arXiv:2301.01197}, 2023.
+
+\bibitem{du2024sequential}
+Jiawei Du, Qin Shi, and Joey~Tianyi Zhou.
+\newblock Sequential subset matching for dataset distillation.
+\newblock {\em Advances in Neural Information Processing Systems}, 36, 2024.
+
+\end{thebibliography}

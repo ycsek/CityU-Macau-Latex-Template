@@ -11,6 +11,13 @@
 %% Original author：He Junwei
 %% Overleaf：https://www.overleaf.com/latex/templates/zhong-guo-ke-xue-yuan-da-xue-ke-cheng-lun-wen-mo-ban/nphpxhhqvnds
 
+%% Modified on the basis of ‘RUC course report template’.
+%% Original author：xxmy7
+%% License：Apache-2.0 license
+%% GitHub：https://github.com/xxmy7/RUC_Report_Latex_Template
+%% Overleaf：https://www.overleaf.com/latex/templates/ruc-report-latex-template/hhwhvvwczbnm
+
+
 
 \ProvidesPackage{CityUhomework}
 
@@ -37,6 +44,13 @@
 \RequirePackage{tcolorbox}
 
 \RequirePackage{fontawesome}
+
+\RequirePackage{caption}
+%% Remove the colon in the icon title and change the separator to a space
+% or:
+% \captionsetup{labelformat=default,labelsep=space} %Remove colon
+\captionsetup[table]{labelsep=space} 
+\captionsetup[figure]{labelsep=space}  
 
 %% change the style of the word summary
 \renewcommand{\abstractname}{\textbf{\large {Abstract}}}
@@ -101,6 +115,9 @@
 
 %% Catlog Settings
 \renewcommand{\contentsname}{\textbf{\large {Contents}}}
+
+%% Reference Settings
+\renewcommand{\refname}{\textbf{\large {References}}}
 
 %% Cover Settings
 \title{
