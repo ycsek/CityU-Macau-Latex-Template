@@ -1,0 +1,99 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage {mathtools}
+\usepackage{utopia} 
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+% set colors
+% CityU Green
+\definecolor{myNewColorA}{RGB}{0,130,100}
+\definecolor{myNewColorB}{RGB}{70,169,148}
+\definecolor{myNewColorC}{RGB}{175,216,206}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+
+%------------------------------------------------------------
+\titlegraphic{\includegraphics[height=1.5cm]{figures/cityu.pdf}}
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+\title[City University of Macau]{Some Title
+}
+\subtitle{M·H·C Lab}
+\author[Name]{Name}
+
+\institute[@city.edu.mo]{ City University of Macau}
+\date{\today}
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\section{Introduction}
+    \begin{frame}{Introduction}
+    \end{frame}
+
+\section{Method}
+    \begin{frame}{Method}
+    \end{frame}
+
+
+
+
+\section{Conclusion}
+    \begin{frame}{Conclusion}
+    \end{frame}
+
+
+
+\section*{Acknowledgement}  
+\begin{frame}
+\textcolor{myNewColorA}{\large{\centerline{Thank you for listening! }}}
+\textcolor{myNewColorA}{\large{\centerline{ Your feedback will be highly appreciated!}}}
+\end{frame}
+
+\end{document}
+
+
+
