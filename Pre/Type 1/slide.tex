@@ -1,0 +1,181 @@
+\documentclass{beamer}
+
+% use the Madrid beamer theme
+\mode<presentation> {
+\usetheme{Madrid}
+}
+\usefonttheme{default}
+\usecolortheme{default}
+\useinnertheme{circles}
+\usepackage{caption}
+\usepackage{perpage} 
+\MakePerPage{footnote}
+% remove scheme=palin if you want date shown as English style
+\usepackage[scheme=plain]{ctex}
+\usepackage[T1]{fontenc}
+
+% Times new Roman font
+\usepackage{newtxtext,newtxmath}
+
+% define pku red color
+% \definecolor{pkured}{cmyk}{0,1.0,1.0,0.45}
+% % set pku red color for title and frame title
+% \setbeamercolor{title}{bg=pkured}
+% % set title font to bold
+% \setbeamerfont{title}{series=\bfseries}
+
+% define CityU green
+\definecolor{cityugreen}{RGB}{0,130,100}
+\setbeamercolor{title}{bg=cityugreen}
+\setbeamerfont{title}{series=\bfseries}
+
+% set frame title font size and weight
+\setbeamerfont*{frametitle}{size=\large,series=\bfseries}
+% show header
+\useoutertheme[subsection=false]{miniframes}
+
+% set header bar background color
+\setbeamercolor{section in head/foot}{fg=white, bg=cityugreen}
+% remove frame title background color
+\setbeamercolor*{frametitle}{fg=cityugreen, bg=white}
+
+% set three-part foot line
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode% horizontally put three beamercolorboxes
+  % author institute box,
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  %short title box
+  \begin{beamercolorbox}[wd=.55\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  % date and page number box
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{3.5em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}%
+}
+\makeatother
+
+
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip0pt\insertnavigation{\paperwidth}\vskip3pt
+  \end{beamercolorbox}
+}
+
+% set toc font and item color
+\setbeamerfont{section in toc}{series=\bfseries}
+\setbeamercolor{section in toc}{fg=cityugreen}
+\setbeamercolor{section number projected}{bg=cityugreen,fg=white}
+
+% set itemize style
+\setbeamercolor{itemize item}{fg=cityugreen}
+\setbeamercolor{itemize subitem}{fg=cityugreen}
+\setbeamercolor{itemize subsubitem}{fg=cityugreen}
+
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[triangle]
+
+% set enumerate style
+\setbeamercolor{item projected}{bg=cityugreen}
+
+% shorten the width of frame title to show logo
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=0.8\paperwidth,ht=3ex,dp=1.125ex]{frametitle}
+    \usebeamerfont{frametitle}\strut\insertframetitle\strut
+    \hfill
+    % \raisebox{-0.5ex}{\includegraphics[height=0.8cm]{example-logo}}
+  \end{beamercolorbox}%
+}
+
+\setbeamerfont{footnote}{size=\tiny}
+\captionsetup{font=scriptsize,labelfont=scriptsize}
+
+% put logo on the right corner
+\logo{\includegraphics[width=2cm]{fig/cityu.pdf}\vspace{7.7cm}\hspace{0.0cm}}
+
+% [] used in the footer, {} used in the title
+\title[]
+{A Simple Beamer Template with CityU }
+
+
+\author[Jason]{Jason Shi}
+
+\institute[MHC-Lab]
+{
+  City University of Macau
+}
+
+\date[\today]{\today}
+
+
+\begin{document}
+
+% plain: remove all header and footer in this page
+\begin{frame}[plain]
+    % show pku logo in the upper center of title page
+    \centering
+    \includegraphics[width=4.5cm]{fig/cityu.pdf}
+    \vspace{-5mm}
+    \titlepage
+\end{frame}
+
+\begin{frame}[plain]
+\frametitle{Table of Contents}
+\hfill
+\parbox[t]{.95\textwidth}{
+  \begin{minipage}[t][0.8\textheight]{0.95\textwidth}
+\tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+  \end{minipage}
+}
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Frame Title}
+\end{frame}
+
+
+{   
+\setbeamerfont{frametitle}{size=\small}
+\begin{frame}{Small Frame Title}
+\end{frame}
+}
+
+
+\section{Related Work}
+
+\begin{frame}{Frame Title}
+    
+\end{frame}
+
+\section{Methodology}
+
+\begin{frame}{Frame Title}
+
+\end{frame}
+
+
+\section{Evaluation}
+\begin{frame}{Frame Title}   
+\end{frame}
+
+\section{Discussion}
+\begin{frame}{Frame Title}
+    
+\end{frame}
+
+\section{Acknowledgement}  
+\begin{frame}
+\textcolor{cityugreen}{\large{\centerline{Thank you for listening! }}}
+\textcolor{cityugreen}{\large{\centerline{ Your feedback will be highly appreciated!}}}
+\end{frame}
+
+
+\end{document}
